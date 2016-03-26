@@ -1,0 +1,21 @@
+{
+  "name": "helloworld-api",
+  "version": "0.0.0",
+  "description": "A basic nodeJS API that returns a familiar message",
+  "main": "index.js",
+  "repository": "",
+  "author": "Adam Londero <x.y@z.com>",
+  "dependencies": {
+    "chai": "3.5.0",
+    "express": "3.2.6",
+    "mocha": "2.4.5",
+    "supertest": "1.2.0"
+  },
+  "engines": {
+    "node": "4.4.0"
+  },
+  "scripts": {
+    "start": "node index",
+    "test": "mocha --reporter nyan test/*.js"
+  }
+}
