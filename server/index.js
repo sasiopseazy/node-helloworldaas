@@ -1,5 +1,9 @@
 var express = require('express');
+var bodyParser = require("body-parser");
 var app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 var loki = require('lokijs')
 var db = new loki('messages.json', {
         autosave: true, 
@@ -21,6 +25,12 @@ function loadHandler() {
 // Gets most recent message
 app.get('/', function (req, res) {
   res.json({'message':messages.get(messages.data.length).message});
+});
+
+// Adds new message
+app.post('/', function(req, res) {
+  messages.insert(req.body)
+  res.send(201);
 });
 
 module.exports = app;

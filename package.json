@@ -6,6 +6,7 @@
   "repository": "",
   "author": "Adam Londero <x.y@z.com>",
   "dependencies": {
+    "body-parser": "1.15.0",
     "chai": "3.5.0",
     "express": "3.2.6",
     "lokijs": "1.3.16",

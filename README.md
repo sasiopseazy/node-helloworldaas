@@ -8,4 +8,19 @@ This API provides you with a familiar greeting whenever you are feeling lonely
 
     $ npm start
 
-Once the server is running. Access the API via a GET call to http://localhost:8080
+## Commands 
+### GET
+A GET call to <pre>'/'</pre> will return the most recent greeting (by default Hello World!)
+<code>
+{
+  "message": "Hello World!"
+}
+</code>
+### POST
+A POST call to <pre>'/'</pre> with the following:
+<code>
+{
+  "message": "Greetings Earthlings!"
+}
+</code>
+will persist that as the most recent greeting (see [the test](/test/index.js) for more details)
